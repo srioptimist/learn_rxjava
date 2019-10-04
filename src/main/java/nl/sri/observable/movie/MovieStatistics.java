@@ -13,6 +13,8 @@ import io.reactivex.disposables.Disposable;
 
 public class MovieStatistics {
 
+    public static Map<Integer, List<Movie>> result;
+
     public static SingleObserver<List<Movie>> movieStatistics() {
         return new SingleObserver<List<Movie>>() {
             @Override
@@ -30,6 +32,8 @@ public class MovieStatistics {
                             moviesGroupByYear.get(year).forEach(movie -> System.out.println(movie.getName()));
                         }
                 );
+
+                result = moviesGroupByYear;
             }
 
             @Override

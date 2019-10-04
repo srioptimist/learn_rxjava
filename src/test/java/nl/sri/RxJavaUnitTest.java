@@ -18,4 +18,6 @@ public class RxJavaUnitTest {
         observer.subscribe(s -> result=s); // Callable as subscriber
         assertTrue(result.equals("Hello"));
     }
+
+
 }
